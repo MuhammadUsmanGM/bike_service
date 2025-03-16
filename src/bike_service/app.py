@@ -17,6 +17,62 @@ latlon_url = "https://tor.publicbikesystem.net/ube/gbfs/v1/en/station_informatio
 st.title('Toronto Bike Share Station Status')  # Set the title of the app
 st.markdown('This dashboard tracks bike availability at each bike share station in Toronto.')  # Add a description
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(to right, #1E3A8A, #40E0D0);
+        color: black;
+        font-family: Arial, sans-serif;
+    }
+    
+    .css-1d391kg { /* Sidebar background */
+        background: linear-gradient(to bottom, #0284C7, #06B6D4);
+        color: white;
+    }
+    
+    .css-18e3th9 { /* Main content background */
+        background: linear-gradient(to right, #1E40AF, #3B82F6);
+        color: white;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 48px !important;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .big-font {
+        font-size: 32px !important;
+        font-weight: bold;
+        color: #FACC15;
+    }
+    
+    .stButton>button {
+        border-radius: 12px;
+        font-size: 20px;
+        padding: 12px 24px;
+        background: linear-gradient(to right, #F97316, #EA580C);
+        color: white;
+        border: none;
+        font-weight: bold;
+    }
+    
+    .stButton>button:hover {
+        background: black;
+        transition: 0.3s;
+    }
+    
+    .stTextInput>label, .stNumberInput>label, .stRadio>label {
+        font-size: 20px;
+        font-weight: bold;
+        color: #FACC15;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Fetch data for initial visualization
 data_df = query_station_status(station_url)  # Get station status data
 latlon_df = get_station_latlon(latlon_url)  # Get station latitude and longitude data

@@ -21,52 +21,14 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(to right, #1E3A8A, #40E0D0);
-        color: black;
-        font-family: Arial, sans-serif;
+        background: linear-gradient(to right,rgb(0, 68, 255), #40E0D0);
     }
     
     .css-1d391kg { /* Sidebar background */
-        background: linear-gradient(to bottom, #0284C7, #06B6D4);
-        color: white;
+        background: linear-gradient(to bottom, #0284C7,rgb(13, 219, 255));
     }
-    
-    .css-18e3th9 { /* Main content background */
-        background: linear-gradient(to right, #1E40AF, #3B82F6);
-        color: white;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 48px !important;
-        font-weight: bold;
-        text-align: center;
-    }
-    
-    .big-font {
-        font-size: 32px !important;
-        font-weight: bold;
-        color: #FACC15;
-    }
-    
-    .stButton>button {
-        border-radius: 12px;
-        font-size: 20px;
-        padding: 12px 24px;
-        background: linear-gradient(to right, #F97316, #EA580C);
-        color: white;
-        border: none;
-        font-weight: bold;
-    }
-    
-    .stButton>button:hover {
-        background: black;
-        transition: 0.3s;
-    }
-    
-    .stTextInput>label, .stNumberInput>label, .stRadio>label {
-        font-size: 20px;
-        font-weight: bold;
-        color: #FACC15;
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(to bottom,rgb(140, 177, 5),rgb(8, 173, 30))
     }
     </style>
     """,

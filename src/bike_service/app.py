@@ -28,10 +28,10 @@ with col1:
     st.metric(label="Bikes Available Now", value=sum(data['num_bikes_available']))  # Display total number of bikes available
     st.metric(label="E-Bikes Available Now", value=sum(data["ebike"]))  # Display total number of e-bikes available
 with col2:
-    st.metric(label="Stations w Available Bikes", value=len(data[data['num_bikes_available'] > 0]))  # Display number of stations with available bikes
-    st.metric(label="Stations w Available E-Bikes", value=len(data[data['ebike'] > 0]))  # Display number of stations with available e-bikes
+    st.metric(label="Stations with Available Bikes", value=len(data[data['num_bikes_available'] > 0]))  # Display number of stations with available bikes
+    st.metric(label="Stations with Available E-Bikes", value=len(data[data['ebike'] > 0]))  # Display number of stations with available e-bikes
 with col3:
-    st.metric(label="Stations w Empty Docks", value=len(data[data['num_docks_available'] > 0]))  # Display number of stations with empty docks
+    st.metric(label="Stations with Empty Docks", value=len(data[data['num_docks_available'] > 0]))  # Display number of stations with empty docks
 
 # Track metrics for delta calculation
 deltas = [

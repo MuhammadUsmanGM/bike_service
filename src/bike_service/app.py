@@ -64,6 +64,13 @@ deltas = [
     len(data[data['num_docks_available'] > 0])
 ]
 
+st.markdown("""
+### Map Legend:
+- 🟢 **Green**: Many bikes available  
+- 🟡 **Yellow**: Limited bikes available  
+- 🔴 **Red**: Few or no bikes available  
+""")
+
 # Initialize variables for user input and state
 iamhere = 0
 iamhere_return = 0

@@ -13,27 +13,31 @@ from streamlit_folium import folium_static  # Import folium_static to render Fol
 station_url = 'https://tor.publicbikesystem.net/ube/gbfs/v1/en/station_status.json'  
 latlon_url = "https://tor.publicbikesystem.net/ube/gbfs/v1/en/station_information"
 
-# Streamlit app setup
-st.title('Toronto Bike Share Station Status')  # Set the title of the app
-st.markdown('This dashboard tracks bike availability at each bike share station in Toronto.')  # Add a description
-
 st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(to right,rgb(0, 68, 255), #40E0D0);
+        background: linear-gradient(to right, rgb(2, 30, 109), rgb(99, 5, 5), rgb(122, 108, 0), rgb(26, 131, 7), #005F69);
     }
     
-    .css-1d391kg { /* Sidebar background */
-        background: linear-gradient(to bottom, #0284C7,rgb(13, 219, 255));
+    .stSidebar {
+        background: linear-gradient(to bottom, rgb(6, 74, 109), rgb(4, 106, 124));
     }
+
+    /* Ensuring sidebar elements follow the new background */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(to bottom,rgb(140, 177, 5),rgb(8, 173, 30))
+        background: linear-gradient(to bottom, rgb(6, 74, 109), rgb(4, 106, 124));
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
+
+
+# Streamlit app setup
+st.title('Toronto Bike Share Station Status')  # Set the title of the app
+st.markdown('This dashboard tracks bike availability at each bike share station in Toronto.')  # Add a description
+
 
 # Fetch data for initial visualization
 data_df = query_station_status(station_url)  # Get station status data
